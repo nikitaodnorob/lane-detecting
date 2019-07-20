@@ -37,7 +37,7 @@ namespace LaneDetection
                 Mat workArea = new Mat();
                 imageS.CopyTo(workArea, workAreaMask);
 
-                //  Get HSV, grat and canny
+                //  Get HSV, gray and canny
                 Mat hsvImage = workArea.CvtColor(ColorConversionCodes.RGB2HSV);
                 Mat canny1 = hsvImage.Canny(40, 60);
                 Mat gray = workArea.CvtColor(ColorConversionCodes.BGR2GRAY);
